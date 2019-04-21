@@ -24,8 +24,8 @@
       <url>http://repo.md-5.net/content/repositories/snapshots/</url>
     </repository>
     <repository>
-      <id>md_5-releases</id>
-      <url>http://repo.md-5.net/content/repositories/releases/</url>
+      <id>md_5-public</id>
+      <url>http://repo.md-5.net/content/groups/public/</url>
     </repository>
     <repository>
       <id>cititensnpcs</id>
@@ -42,25 +42,37 @@
         <dependency>
           <groupId>org.bukkit</groupId>
           <artifactId>bukkit</artifactId>
-          <version>1.8.8-R0.1-SNAPSHOT</version>
+          <version>1.13.2-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
         </dependency>
+        <!--
+            Page: https://www.spigotmc.org/resources/official-mcmmo-original-author-returns.64348/history
+            File: https://www.spigotmc.org/resources/official-mcmmo-original-author-returns.64348/update?update=273597
+            Install: mvn install:install-file -DgroupId=com.gmail.nossr50 -DartifactId=mcMMO -Dversion=2.1.46 -Dpackaging=jar -Dfile=mcMMO_2.1.46.jar
+            Test: mvn dependency:get -Dartifact=com.gmail.nossr50:mcMMO:2.1.46
+        -->
        <dependency>
-          <groupId>com.gmail.nossr50.mcMMO</groupId>
+          <groupId>com.gmail.nossr50</groupId>
           <artifactId>mcMMO</artifactId>
-          <version>1.5.04-SNAPSHOT</version>
+          <version>2.1.46</version>
           <scope>provided</scope>
        </dependency>
+        <!--
+            Page: https://github.com/CaptainObvious0/NoCheatPlus/releases
+            File: https://github.com/CaptainObvious0/NoCheatPlus/releases/tag/v1.3-beta.4
+            Install: mvn install:install-file -DgroupId=fr.neatmonster.nocheatplus -DartifactId=NoCheatPlus -Dversion=v1.3-beta.4 -Dpackaging=jar -Dfile=NoCheatPlus-v1.3-beta.4.jar
+            Test: mvn dependency:get -Dartifact=fr.neatmonster.nocheatplus:NoCheatPlus:v1.3-beta.4
+        -->
        <dependency>
-        <groupId>fr.neatmonster</groupId>
-        <artifactId>nocheatplus</artifactId>
-        <version>3.16.1-SNAPSHOT</version>
+        <groupId>fr.neatmonster.nocheatplus</groupId>
+        <artifactId>NoCheatPlus</artifactId>
+        <version>v1.3-beta.4</version>
         <scope>provided</scope>
        </dependency>
        <dependency>
           <groupId>net.citizensnpcs</groupId>
           <artifactId>citizensapi</artifactId>
-          <version>2.0.16-SNAPSHOT</version>
+          <version>2.0.24-SNAPSHOT</version>
           <scope>provided</scope>
        </dependency>
     </dependencies>
